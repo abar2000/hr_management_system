@@ -9,6 +9,12 @@ use App\Http\Controllers\DepartmentsController;
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\EmployeesController;
 use App\Http\Controllers\AnnouncementController;
+use App\Http\Controllers\LeaveTypeController;
+use App\Http\Controllers\SalarayAdvanceController;
+use App\Http\Controllers\ShortLeavesController; 
+use App\Http\Controllers\AllowedLeaveController;
+use App\Http\Controllers\LeaveRequestController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -66,3 +72,33 @@ Route::get ('/announcements/{id}', [AnnouncementController::class, 'getAnnouncem
 Route::POST('/announcements', [AnnouncementController::class, 'saveAnnouncement']);
 Route::put ('/announcements/{id}', [AnnouncementController::class, 'updateAnnouncement']);
 Route::delete ('/announcements/{id}', [AnnouncementController::class, 'destroy']);
+
+Route::get ('/leavetypes', [LeaveTypeController::class, 'getAllLeaveType']);
+Route::get ('/leavetypes/{id}', [LeaveTypeController::class, 'getLeaveTypeInfo']);
+Route::POST('/leavetypes', [LeaveTypeController::class, 'saveLeaveType']);
+Route::put ('/leavetypes/{id}', [LeaveTypeController::class, 'updateLeaveType']);
+Route::delete ('/leavetypes/{id}', [LeaveTypeController::class, 'destroy']);
+
+Route::get ('/salaryadvance', [SalarayAdvanceController::class, 'getAllSalaryAdvance']);
+Route::get ('/salaryadvance/{id}', [SalarayAdvanceController::class, 'getSalaryAdvance']);
+Route::POST('/salaryadvance', [SalarayAdvanceController::class, 'saveSalaryAdvance']);
+Route::put ('/salaryadvance/{id}', [SalarayAdvanceController::class, 'updateSalaryAdvance']);
+Route::delete ('/salaryadvance/{id}', [SalarayAdvanceController::class, 'destroy']);
+
+Route::get ('/shortleaves', [ShortLeavesController::class, 'getAllShortleaves']);
+Route::get ('/shortleaves/{id}', [ShortLeavesController::class, 'getShortleaves']);
+Route::POST('/shortleaves', [ShortLeavesController::class, 'saveShortleaves']);
+Route::put ('/shortleaves/{id}', [ShortLeavesController::class, 'updateShortleaves']);
+Route::delete ('/shortleaves/{id}', [ShortLeavesController::class, 'destroy']);
+
+Route::get ('/allowedleaves', [AllowedLeaveController::class, 'getAllAllowedleaves']);
+Route::get ('/allowedleaves/{id}', [AllowedLeaveController::class, 'getAllowedleaves']);
+Route::POST('/allowedleaves', [AllowedLeaveController::class, 'saveAllowedleaves']);
+Route::put ('/allowedleaves/{id}', [AllowedLeaveController::class, 'updateAllowedleaves']);
+Route::delete ('/allowedleaves/{id}', [AllowedLeaveController::class, 'destroy']);
+
+Route::get ('/leaverequests', [LeaveRequestController::class, 'getAllLeaverequest']);
+Route::get ('/leaverequests/{id}', [LeaveRequestController::class, 'getLeaverequest']);
+Route::POST('/leaverequests', [LeaveRequestController::class, 'saveLeaverequest']);
+Route::put ('/leaverequests/{id}', [LeaveRequestController::class, 'updateLeaverequest']);
+Route::delete ('/leaverequests/{id}', [LeaveRequestController::class, 'destroy']);

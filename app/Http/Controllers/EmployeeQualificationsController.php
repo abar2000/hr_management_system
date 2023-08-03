@@ -63,3 +63,9 @@ class EmployeeQualificationsController extends Controller
         //
     }
 }
+
+
+
+
+/**********************************API FUNCTIONS****************************************/
+/*********no need to do anything just we can do for viewing (get all employeequalification)*************/
